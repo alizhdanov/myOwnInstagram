@@ -1,0 +1,34 @@
+extends base/layout
+
+block variabless
+	- var pageId = 1;
+
+block headerCustom
+	.badges
+		mixin monthsBadges(item)
+			a.badge(class=item.class href=item.href)
+				.badge__icon
+				.badge__text
+					span= item.monthText
+					span месяцев
+		
+		+monthsBadges({
+			class: 'badge--md badge--md-4',
+			href: '#',
+			monthText: 'с 4-х'
+		})
+
+		+monthsBadges({
+			class: 'badge--md badge--md-5',
+			href: '#',
+			monthText: 'с 5'
+		})
+
+		+monthsBadges({
+			class: 'badge--md badge--md-6',
+			href: '#',
+			monthText: 'с 6'
+		})
+
+
+block content

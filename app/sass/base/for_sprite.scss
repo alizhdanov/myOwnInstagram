@@ -1,313 +1,49 @@
-/* glue: 0.11.1 hash: 375a0aebec */
-
-@mixin sprite__catalog-section-item {
-  background-repeat: no-repeat;
-  background-position: -2px -2px;
-  width: 429px;
-  height: 35px;
-	background-size: 1042px 889px;
-}
-
-@mixin sprite__beef {
-  background-repeat: no-repeat;
-  background-position: -2px -41px;
-  width: 387px;
-  height: 231px;
-	background-size: 1042px 889px;
-}
-
-@mixin sprite__clouds-3 {
-  background-repeat: no-repeat;
-  background-position: -2px -276px;
-  width: 301px;
-  height: 101px;
-	background-size: 1042px 889px;
-}
-
-@mixin sprite__bage-lg-blue {
-  background-repeat: no-repeat;
-  background-position: -2px -381px;
-  width: 296px;
-  height: 46px;
-	background-size: 1042px 889px;
-}
-
-@mixin sprite__clouds-1 {
-  background-repeat: no-repeat;
-  background-position: -435px -2px;
-  width: 294px;
-  height: 101px;
-	background-size: 1042px 889px;
-}
-
-@mixin sprite__logo-big {
-  background-repeat: no-repeat;
-  background-position: -435px -107px;
-  width: 287px;
-  height: 145px;
-	background-size: 1042px 889px;
-}
-
-@mixin sprite__cloud-big-1 {
-  background-repeat: no-repeat;
-  background-position: -435px -256px;
-  width: 263px;
-  height: 155px;
-	background-size: 1042px 889px;
-}
-
-@mixin sprite__balloon {
-  background-repeat: no-repeat;
-  background-position: -2px -431px;
-  width: 186px;
-  height: 229px;
-	background-size: 1042px 889px;
-}
+/* glue: 0.11.1 hash: a1a781fb06 */
 
 @mixin sprite__logo {
   background-repeat: no-repeat;
-  background-position: -192px -431px;
-  width: 226px;
-  height: 114px;
-	background-size: 1042px 889px;
+  background-position: -2px -2px;
+  width: 537px;
+  height: 144px;
+	background-size: 541px 216px;
 }
 
-@mixin sprite__ballon-orange {
+@mixin sprite__badge-md-4 {
   background-repeat: no-repeat;
-  background-position: -733px -2px;
-  width: 180px;
-  height: 223px;
-	background-size: 1042px 889px;
+  background-position: -2px -150px;
+  width: 54px;
+  height: 64px;
+	background-size: 541px 216px;
 }
 
-@mixin sprite__ballon-green {
+@mixin sprite__badge-md-6 {
   background-repeat: no-repeat;
-  background-position: -733px -229px;
-  width: 180px;
-  height: 223px;
-	background-size: 1042px 889px;
-}
-
-@mixin sprite__ballon-blue {
-  background-repeat: no-repeat;
-  background-position: -2px -664px;
-  width: 180px;
-  height: 223px;
-	background-size: 1042px 889px;
-}
-
-@mixin sprite__string-4 {
-  background-repeat: no-repeat;
-  background-position: -393px -41px;
-  width: 22px;
-  height: 210px;
-	background-size: 1042px 889px;
-}
-
-@mixin sprite__string-2 {
-  background-repeat: no-repeat;
-  background-position: -186px -664px;
-  width: 22px;
-  height: 210px;
-	background-size: 1042px 889px;
-}
-
-@mixin sprite__catalog-products-label {
-  background-repeat: no-repeat;
-  background-position: -422px -431px;
-  width: 194px;
-  height: 32px;
-	background-size: 1042px 889px;
-}
-
-@mixin sprite__bage-sm-orange {
-  background-repeat: no-repeat;
-  background-position: -422px -467px;
-  width: 187px;
-  height: 27px;
-	background-size: 1042px 889px;
-}
-
-@mixin sprite__bage-sm-green {
-  background-repeat: no-repeat;
-  background-position: -422px -498px;
-  width: 187px;
-  height: 27px;
-	background-size: 1042px 889px;
-}
-
-@mixin sprite__bage-sm-blue {
-  background-repeat: no-repeat;
-  background-position: -192px -549px;
-  width: 187px;
-  height: 27px;
-	background-size: 1042px 889px;
-}
-
-@mixin sprite__bage-xl-orange {
-  background-repeat: no-repeat;
-  background-position: -733px -456px;
-  width: 170px;
-  height: 49px;
-	background-size: 1042px 889px;
-}
-
-@mixin sprite__product-9 {
-  background-repeat: no-repeat;
-  background-position: -733px -509px;
-  width: 166px;
-  height: 83px;
-	background-size: 1042px 889px;
-}
-
-@mixin sprite__product-8 {
-  background-repeat: no-repeat;
-  background-position: -212px -664px;
-  width: 151px;
-  height: 96px;
-	background-size: 1042px 889px;
-}
-
-@mixin sprite__product-7 {
-  background-repeat: no-repeat;
-  background-position: -212px -764px;
-  width: 151px;
-  height: 105px;
-	background-size: 1042px 889px;
-}
-
-@mixin sprite__product-6 {
-  background-repeat: no-repeat;
-  background-position: -367px -664px;
-  width: 139px;
-  height: 96px;
-	background-size: 1042px 889px;
-}
-
-@mixin sprite__product-1 {
-  background-repeat: no-repeat;
-  background-position: -917px -2px;
-  width: 123px;
-  height: 133px;
-	background-size: 1042px 889px;
-}
-
-@mixin sprite__string-5 {
-  background-repeat: no-repeat;
-  background-position: -917px -139px;
-  width: 21px;
-  height: 131px;
-	background-size: 1042px 889px;
-}
-
-@mixin sprite__string-3 {
-  background-repeat: no-repeat;
-  background-position: -942px -139px;
-  width: 21px;
-  height: 131px;
-	background-size: 1042px 889px;
-}
-
-@mixin sprite__string-1 {
-  background-repeat: no-repeat;
-  background-position: -967px -139px;
-  width: 19px;
-  height: 131px;
-	background-size: 1042px 889px;
-}
-
-@mixin sprite__product-2 {
-  background-repeat: no-repeat;
-  background-position: -917px -274px;
-  width: 105px;
-  height: 127px;
-	background-size: 1042px 889px;
-}
-
-@mixin sprite__product-3 {
-  background-repeat: no-repeat;
-  background-position: -917px -405px;
-  width: 87px;
-  height: 126px;
-	background-size: 1042px 889px;
-}
-
-@mixin sprite__clouds-2 {
-  background-repeat: no-repeat;
-  background-position: -192px -580px;
-  width: 126px;
-  height: 75px;
-	background-size: 1042px 889px;
-}
-
-@mixin sprite__header-nav-bg {
-  background-repeat: no-repeat;
-  background-position: -733px -596px;
-  width: 125px;
-  height: 35px;
-	background-size: 1042px 889px;
-}
-
-@mixin sprite__product-10 {
-  background-repeat: no-repeat;
-  background-position: -917px -535px;
-  width: 88px;
-  height: 124px;
-	background-size: 1042px 889px;
-}
-
-@mixin sprite__month-bage {
-  background-repeat: no-repeat;
-  background-position: -917px -663px;
-  width: 104px;
-  height: 106px;
-	background-size: 1042px 889px;
-}
-
-@mixin sprite__cloud-small-4 {
-  background-repeat: no-repeat;
-  background-position: -917px -773px;
-  width: 100px;
+  background-position: -60px -150px;
+  width: 38px;
   height: 60px;
-	background-size: 1042px 889px;
+	background-size: 541px 216px;
 }
 
-@mixin sprite__cloud-small-2 {
+@mixin sprite__badge-md-5 {
   background-repeat: no-repeat;
-  background-position: -307px -276px;
-  width: 98px;
-  height: 71px;
-	background-size: 1042px 889px;
+  background-position: -102px -150px;
+  width: 38px;
+  height: 60px;
+	background-size: 541px 216px;
 }
 
-@mixin sprite__cloud-small-3 {
+@mixin sprite__bracket-right {
   background-repeat: no-repeat;
-  background-position: -322px -580px;
-  width: 91px;
-  height: 70px;
-	background-size: 1042px 889px;
+  background-position: -144px -150px;
+  width: 14px;
+  height: 37px;
+	background-size: 541px 216px;
 }
 
-@mixin sprite__cloud-small-1 {
+@mixin sprite__bracket-left {
   background-repeat: no-repeat;
-  background-position: -417px -580px;
-  width: 88px;
-  height: 57px;
-	background-size: 1042px 889px;
-}
-
-@mixin sprite__product-top {
-  background-repeat: no-repeat;
-  background-position: -510px -664px;
-  width: 70px;
-  height: 83px;
-	background-size: 1042px 889px;
-}
-
-@mixin sprite__flash {
-  background-repeat: no-repeat;
-  background-position: -990px -139px;
-  width: 37px;
-  height: 58px;
-	background-size: 1042px 889px;
+  background-position: -162px -150px;
+  width: 14px;
+  height: 37px;
+	background-size: 541px 216px;
 }
