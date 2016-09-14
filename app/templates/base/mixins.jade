@@ -1,14 +1,12 @@
-mixin ballons(item)
-	.balloons__wrap(class=item.wrapClass)
-		a.balloons__item(href="#" class=item.balloonClass)
-			.balloons__item-wrap
-				.balloons__item-img(class=item.imgClass)
-				.balloons__item-text(class=item.descrClass)
-					span!= item.descr
-		.balloons__string(class=item.stringClass)
+mixin monthsBadges(item)
+			a.badge(class=item.class href=item.href)
+				.badge__icon
+				.badge__text
+					span= item.monthText
+					span месяцев
 
-mixin breadcrumbs(item)
-	ul.catalog-header__breadcrumbs
+mixin breadcrumbs(modifier, item)
+	ul.breadcrumbs(class=modifier)
 		each list in item
-			li.catalog-header__breadcrumbs-item
-				a.catalog-header__breadcrumbs-link(href=list.href)= list.text
+			li.breadcrumbs__item
+				a.breadcrumbs__link(href=list.href)= list.text

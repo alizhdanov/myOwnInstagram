@@ -1,10 +1,18 @@
 .badges {
 	margin-top: 55px;
-	text-align: right;
+	text-align: left;
 }
 .badge {
 	display: inline-block;
 	margin: 0 25px;
+
+	&:first-child {
+		margin-left: 0;
+	}
+
+	&:last-child {
+		margin-right: 0;
+	}
 
 	&--md {
 		font-size: 20px;

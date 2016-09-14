@@ -5,12 +5,6 @@ block variabless
 
 block headerCustom
 	.badges
-		mixin monthsBadges(item)
-			a.badge(class=item.class href=item.href)
-				.badge__icon
-				.badge__text
-					span= item.monthText
-					span месяцев
 		
 		+monthsBadges({
 			class: 'badge--md badge--md-4',

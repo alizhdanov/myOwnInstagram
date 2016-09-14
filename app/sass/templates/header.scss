@@ -5,10 +5,13 @@
 		@include sprite-img;
 		@include sprite__logo;
 	}
+
+	&__right {
+		padding-left: 65px;
+	}
 }
 
 .header-nav {
-	text-align: right;
 
 	&__list {
 		@include listReset;
@@ -18,7 +21,11 @@
 
 	&__item {
 		display: inline-block;
-		margin: 0 25px;
+		margin: 0 24px;
+
+		&:first-child {
+			margin-left: 0;
+		}
 
 		&:last-child {
 			margin-right: 0;
