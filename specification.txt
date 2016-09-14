@@ -1,0 +1,1 @@
+glue app/img/for_sprite --img=app/img/sprite --scss=app/sass/base --scss-template=glue_sprite_less_template.jinja -f  --sprite-namespace= --namespace= --margin=2

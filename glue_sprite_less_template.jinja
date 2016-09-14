@@ -1,0 +1,10 @@
+/* glue: {{ version }} hash: {{ hash }} */
+{% for image in images %}
+@mixin sprite__{{ image.label }} {
+  background-repeat: no-repeat;
+  background-position: {{ image.x ~ ('px' if image.x) }} {{ image.y ~ ('px' if image.y) }};
+  width: {{ image.width }}px;
+  height: {{ image.height }}px;
+	background-size: {{ width }}px {{ height }}px;
+}
+{% endfor %}

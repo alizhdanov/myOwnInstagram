@@ -1,0 +1,49 @@
+@mixin clearfix {
+	&::after, {
+		content: "";
+		display: table;
+		clear: both;
+	}
+
+	&::before {
+		content: "";
+		display: table;
+	}
+}
+
+@mixin vertical-align {
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+@mixin centerer($horizontal: true, $vertical: true) {
+	position: absolute;
+
+	@if ($horizontal and $vertical) {
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+
+	@else if ($horizontal) {
+		left: 50%;
+		transform: translate(-50%, 0);
+	}
+
+	@else if ($vertical) {
+		top: 50%;
+		transform: translate(0, -50%);
+	}
+}
+
+@mixin sprite-img {
+	display: inline-block;
+	background-image: url('../img/sprite/for_sprite.png');
+}
+
+@mixin listReset {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}

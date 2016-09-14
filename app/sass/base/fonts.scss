@@ -1,0 +1,21 @@
+$font-path: '../fonts/';
+
+@font-face {
+	font-family: "PlainScriptCTT";
+	src: url('#{$font-path}plainscript/PlainScriptCTT.eot');
+	src:
+		url('#{$font-path}plainscript/PlainScriptCTT.eot?#iefix') format('embedded-opentype'),
+		url('#{$font-path}plainscript/PlainScriptCTT.woff') format('woff'),
+		url('#{$font-path}plainscript/PlainScriptCTT.ttf') format('truetype'),
+		url('#{$font-path}plainscript/PlainScriptCTT.svg#PlainScriptCTT') format('svg');
+}
+
+@font-face {
+	font-family: "Panton SemiBold";
+	src: url('#{$font-path}panton/Panton-SemiBold.eot');
+	src:
+		url('#{$font-path}panton/Panton-SemiBold.eot?#iefix') format('embedded-opentype'),
+		url('#{$font-path}panton/Panton-SemiBold.woff') format('woff'),
+		url('#{$font-path}panton/Panton-SemiBold.ttf') format('truetype'),
+		url('#{$font-path}panton/Panton-SemiBold.svg#PantonSemiBold') format('svg');
+}

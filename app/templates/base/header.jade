@@ -1,0 +1,31 @@
+header.header: .container
+	.grid
+		.col-md-1-2
+			a.header__logo(href="#")
+		.col-md-1-2
+			nav.header-nav
+				mixin headerNav(list)
+					ul.header-nav__list
+						each item, i in list
+							li.header-nav__item
+								if pageId === i
+									a.header-nav__link.header-nav__link--active(href=item.href)
+										span= item.name
+								else
+									a.header-nav__link(href=item.href)
+										span= item.name
+				
+				+headerNav([{
+						name: 'Главная',
+						href: '/'
+					}, {
+						name: 'Каталог',
+						href: '/catalog.html'
+					} ,{
+						name: 'Где купить',
+						href: '/internal-catalog.html'
+					} , {
+						name: 'Назад',
+						href: '/product-card.html'
+					} ])
+							
