@@ -5,9 +5,19 @@
 	&__item {
 		max-width: 330px;
 		display: inline-block;
+		text-align: center;
 
 		@include mq($until: md) {
 			margin-bottom: 30px;
+		}
+
+		&--small {
+			max-width: 215px;
+			margin-bottom: 20px;
+
+			.catalog__descr {
+				font-size: 24px;
+			}
 		}
 	}
 
