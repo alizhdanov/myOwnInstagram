@@ -1,10 +1,16 @@
 .badges {
 	margin-top: 55px;
-	text-align: left;
+
+	@include mq($from: lg) {
+		text-align: left;
+	}
+
+	@include mq($until: lg) {
+		margin-top: 20px;
+	}
 }
 .badge {
 	display: inline-block;
-	margin: 0 25px;
 
 	&:first-child {
 		margin-left: 0;
@@ -15,7 +21,18 @@
 	}
 
 	&--md {
+		margin: 0 25px;
 		font-size: 20px;
+
+		@include mq($until: sm) {
+			margin: 0 20px;
+		}
+
+		@include mq($until: xs) {
+			display: block;
+			margin: 15px 0;
+		}
+
 	}
 
 	&--md-6 {

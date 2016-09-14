@@ -5,7 +5,7 @@ block variabless
 
 block headerCustom
 	.badges
-		
+
 		+monthsBadges({
 			class: 'badge--md badge--md-4',
 			href: '#',
@@ -26,3 +26,19 @@ block headerCustom
 
 
 block content
+	main.catalog
+		.container
+			.grid
+				.col-md-1-2
+					.catalog__item
+						.catalog__img-wrap
+							a.catalog__img(href="#")
+								img(src="img/product-md-1.png" alt="product-md-1")
+						.catalog__descr Смузи из фруктов<br> и ягод
+
+				.col-md-1-2
+					.catalog__item
+						.catalog__img-wrap
+							a.catalog__img(href="#")
+								img(src="img/product-md-2.png" alt="product-md-2")
+						.catalog__descr Пюре для <br> детей 

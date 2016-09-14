@@ -1,13 +1,27 @@
 .header {
 	padding-top: 45px;
 
+	@include mq($until: lg) {
+		text-align: center;
+	}
+
 	&__logo {
-		@include sprite-img;
-		@include sprite__logo;
+		display: inline-block;
+
+		img {
+			display: block;
+			max-width: 100%;
+			height: auto;
+		}
 	}
 
 	&__right {
 		padding-left: 65px;
+
+		@include mq($until: lg) {
+			margin-top: 30px;
+			padding-left: 0;
+		}
 	}
 }
 
@@ -29,6 +43,15 @@
 
 		&:last-child {
 			margin-right: 0;
+		}
+
+		@include mq($until: sm) {
+			margin: 0 18px;
+		}
+
+		@include mq($until: xs) {
+			display: block;
+			margin: 20px 0;
 		}
 	}
 

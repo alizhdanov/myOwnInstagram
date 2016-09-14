@@ -1,0 +1,39 @@
+.catalog {
+	padding-top: 45px;
+	text-align: center;
+
+	&__item {
+		max-width: 330px;
+		display: inline-block;
+
+		@include mq($until: md) {
+			margin-bottom: 30px;
+		}
+	}
+
+	&__img {
+		display: block;
+
+		@include mq($from: md) {
+			min-height: 200px;
+		}
+		
+
+		img {
+			@include imgResponsive;
+		}
+	}
+
+	&__descr {
+		margin-top: 50px;
+		font-size: 42px;
+
+		@include mq($until: md) {
+			margin-top: 20px;
+		}
+
+		@include mq($until: sm) {
+			font-size: 28px;
+		}
+	}
+}

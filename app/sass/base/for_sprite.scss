@@ -1,49 +1,105 @@
-/* glue: 0.11.1 hash: a1a781fb06 */
+/* glue: 0.11.1 hash: 85aa645b90 */
 
 @mixin sprite__logo {
   background-repeat: no-repeat;
   background-position: -2px -2px;
   width: 537px;
   height: 144px;
-	background-size: 541px 216px;
+	background-size: 814px 810px;
+}
+
+@mixin sprite__product-md-1 {
+  background-repeat: no-repeat;
+  background-position: -2px -150px;
+  width: 329px;
+  height: 200px;
+	background-size: 814px 810px;
+}
+
+@mixin sprite__product-md-2 {
+  background-repeat: no-repeat;
+  background-position: -543px -2px;
+  width: 269px;
+  height: 188px;
+	background-size: 814px 810px;
+}
+
+@mixin sprite__products-sm-3 {
+  background-repeat: no-repeat;
+  background-position: -2px -354px;
+  width: 211px;
+  height: 226px;
+	background-size: 814px 810px;
+}
+
+@mixin sprite__products-sm-5 {
+  background-repeat: no-repeat;
+  background-position: -217px -354px;
+  width: 210px;
+  height: 225px;
+	background-size: 814px 810px;
+}
+
+@mixin sprite__products-sm-1 {
+  background-repeat: no-repeat;
+  background-position: -431px -354px;
+  width: 210px;
+  height: 225px;
+	background-size: 814px 810px;
+}
+
+@mixin sprite__products-sm-2 {
+  background-repeat: no-repeat;
+  background-position: -2px -584px;
+  width: 213px;
+  height: 224px;
+	background-size: 814px 810px;
+}
+
+@mixin sprite__products-sm-4 {
+  background-repeat: no-repeat;
+  background-position: -219px -584px;
+  width: 210px;
+  height: 223px;
+	background-size: 814px 810px;
 }
 
 @mixin sprite__badge-md-4 {
   background-repeat: no-repeat;
-  background-position: -2px -150px;
+  background-position: -543px -194px;
   width: 54px;
   height: 64px;
-	background-size: 541px 216px;
+	background-size: 814px 810px;
 }
 
 @mixin sprite__badge-md-6 {
   background-repeat: no-repeat;
-  background-position: -60px -150px;
+  background-position: -601px -194px;
   width: 38px;
   height: 60px;
-	background-size: 541px 216px;
+	background-size: 814px 810px;
 }
 
 @mixin sprite__badge-md-5 {
   background-repeat: no-repeat;
-  background-position: -102px -150px;
+  background-position: -643px -194px;
   width: 38px;
   height: 60px;
-	background-size: 541px 216px;
+	background-size: 814px 810px;
 }
 
 @mixin sprite__bracket-right {
   background-repeat: no-repeat;
-  background-position: -144px -150px;
+  background-position: -685px -194px;
   width: 14px;
   height: 37px;
-	background-size: 541px 216px;
+	background-size: 814px 810px;
 }
 
 @mixin sprite__bracket-left {
   background-repeat: no-repeat;
-  background-position: -162px -150px;
+  background-position: -703px -194px;
   width: 14px;
   height: 37px;
-	background-size: 541px 216px;
+	background-size: 814px 810px;
 }
