@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="app">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
@@ -7,30 +7,23 @@
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
-    <header class="header">
-      <div class="container">
-        <div class="grid">
-          <div class="col-lg-1-2"><a href="#" class="header__logo"><img src="img/logo.png" alt="logo"></a></div>
-          <div class="col-lg-1-2">
-            <div class="header__right">
-              <nav class="header-nav">
-                                <ul class="header-nav__list">
-                                  <li class="header-nav__item"><a href="/" class="header-nav__link header-nav__link--active">Главная</a>
-                                  </li>
-                                  <li class="header-nav__item"><a href="/catalog.html" class="header-nav__link">Каталог</a>
-                                  </li>
-                                  <li class="header-nav__item"><a href="/internal-catalog.html" class="header-nav__link">Где купить</a>
-                                  </li>
-                                  <li class="header-nav__item"><a href="/product-card.html" class="header-nav__link">Назад</a>
-                                  </li>
-                                </ul>
-              </nav><a>aaa</a>
-            </div>
-          </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <nav-panel></nav-panel>
+      </div>
+      <div class="panel-body">
+        <div class="left-bar">
+          <left-panel></left-panel>
+        </div>
+        <div class="main-listing">
+          <main-panel></main-panel>
+          <page-panel></page-panel>
         </div>
       </div>
-    </header>
-    <footer class="footer"></footer>
+    </div>
+
+    <script src="js/angular.min.js"></script>
     <script src="js/index.js"></script>
   </body>
 </html>

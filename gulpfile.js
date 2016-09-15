@@ -111,14 +111,13 @@ gulp.task('svg', function() {
 
 
 
-gulp.task('watch',['styles', 'html'], function(){
+gulp.task('watch',['styles'], function(){
 
     browserSync.init({
         server: "./app"
     });
 
     gulp.watch('app/sass/**/*.scss', ['styles']);
-	gulp.watch("app/templates/**/*", ['html']);
 	gulp.watch("app/js/*.js").on('change', browserSync.reload);
 });
 

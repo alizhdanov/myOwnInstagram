@@ -1,0 +1,30 @@
+/* Styles go here */
+.panel-body:after{
+  content: '';
+  display: 'table';
+  clear: 'both';
+}
+.left-bar{
+  float:left;
+  width:140px;
+  clear:right;
+}
+.main-listing{
+  margin-left:150px;
+}
+.main-listing table th:first-child{
+  width:120px;
+}
+.main-listing table th:last-child{
+  width:70px;
+}
+.page-container{
+  position:relative;
+  padding-bottom:40px;
+}
+.page-container ul{
+  position:absolute;
+  bottom:0;
+  right:0;
+  margin-bottom:10px;
+}

@@ -5,22 +5,9 @@
 
 // base
 
-@import "base/normalize";
-@import 'base/variables';
-@import 'base/for_sprite';
 @import 'base/mixins';
 
 @import 'vendor/_mq';
+@import 'vendor/_bootstrap';
 
-@import 'base/fonts';
-@import 'base/base';
-@import 'base/grid';
-
-@import 'base/badge';
-@import 'base/breadcrumbs';
-
-
-
-
-@import 'templates/header';
-@import 'templates/catalog';
+@import 'templates/custom'
