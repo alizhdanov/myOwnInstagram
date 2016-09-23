@@ -70,7 +70,7 @@
 
         <div class="row">
           <div ng-class="{'col-md-3': currency.three = true, 'col-md-4': currency.four, 'col-md-6': currency.six}" class="img-item" ng-repeat="images in currency.images | limitTo:currency.limit | orderBy: currency.sortType: currency.sortReverse">
-            <a href="" class="thumbnail instagram-item" ng-click="currency.showModal(images)">
+            <a href="" class="thumbnail instagram-item" ng-click="currency.showModal(images, $index)">
               <img class="img-responsive" ng-src="{{ images.images.low_resolution.url }}" alt="">
               <div class="info">
                 <span class="comments">
@@ -99,6 +99,10 @@
         <div class="modal fade bs-example-modal-lg" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
           <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
+
+              <span class="modal-arrow-left glyphicon glyphicon-menu-left" ng-click="currency.prevModal()"></span>
+              <span class="modal-arrow-right glyphicon glyphicon-menu-right" ng-click="currency.nextModal()"></span>
+
               <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                 <h4 class="modal-title" id="myModalLabel">{{ currency.modalIndex.caption.text }} <span class="grey-lighter">- {{ currency.modalIndex.location.name }}</span></h4>
@@ -106,7 +110,7 @@
               <div class="modal-body">
                 <div class="row">
                   <div class="col-md-8">
-                    <img class="img-responsive" ng-src="{{ currency.modalIndex.images.standard_resolution.url }}" alt="">
+                    <img ng-cloak class="img-responsive modal-img" ng-src="{{ currency.modalIndex.images.standard_resolution.url }}" alt="">
                   </div>
                   <div class="col-md-4">
                     <div class="modal-sidebar">

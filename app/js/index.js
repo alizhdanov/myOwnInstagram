@@ -24,11 +24,25 @@ app.controller('CurrencyController', function($http){
     self.limit += 8;
   };
   
-  this.showModal = function (index) {
+  this.showModal = function (index, number) {
+
     self.modalIndex = index;
+
+    self.modalActive = number;
     
 
     $('#myModal').modal('show');
+
+  };
+
+  this.nextModal = function () {
+    self.modalIndex = self.images[++self.modalActive];
+  };
+
+  this.prevModal = function () {
+    if (self.modalActive > 0) {
+      self.modalIndex = self.images[--self.modalActive];
+    }
 
   };
 
