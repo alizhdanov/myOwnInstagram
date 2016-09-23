@@ -5,25 +5,135 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
     <title>Statement Maker</title>
     <link href="css/style.css" rel="stylesheet">
+    <script src="js/angular.min.js"></script>
+    <script src="js/jquery-3.1.0.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/index.js"></script>
   </head>
   <body>
 
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        <nav-panel></nav-panel>
-      </div>
-      <div class="panel-body">
-        <div class="left-bar">
-          <left-panel></left-panel>
+    <header class="header page-header clearfix" ng-controller="InfoController as info">
+      <div class="container">
+        <img class=" header-img img-circle" src="img/avatar.jpg" width="150px" height="150px" alt="">
+        <div class="header-text">
+          <h1>{{info.info.full_name}}'s</h1>
+          <h3>fancy instagram</h3>
         </div>
-        <div class="main-listing">
-          <main-panel></main-panel>
-          <page-panel></page-panel>
-        </div>
+        <table class="header-table table table-bordered pull-right">
+          <tr>
+            <td colspan="3" align="center">
+              <strong>{{info.info.username}}</strong>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <strong>{{info.info.counts.media}}</strong>
+              posts
+            </td>
+            <td>
+              <strong>{{info.info.counts.followed_by}}</strong>
+              folowers
+            </td>
+            <td>
+              <strong>{{info.info.counts.follows}}</strong>
+              folowing
+            </td>
+          </tr>
+        </table>
       </div>
-    </div>
+    </header>
 
-    <script src="js/angular.min.js"></script>
-    <script src="js/index.js"></script>
+
+    <div class="container" ng-controller="CurrencyController as currency">
+
+      <main class="content">
+        <div class="top-line clearfix">
+          <span></span>
+          <div class="btn-group" role="group">
+            <button type="button" class="btn btn-default" ng-click="currency.three = !currency.three; currency.four = false; currency.six = false">
+              <span class="glyphicon glyphicon-align-left" aria-hidden="true"></span>
+            </button>
+            <button type="button" class="btn btn-default" ng-click="currency.four = !currency.four; currency.six = false">
+              <span class="glyphicon glyphicon-align-center" aria-hidden="true"></span>
+            </button>
+            <button type="button" class="btn btn-default" ng-click="currency.six = !currency.six; currency.four = false">
+              <span class="glyphicon glyphicon-align-right" aria-hidden="true"></span>
+            </button>
+          </div>
+
+          <div class="btn-group pull-right" role="group">
+            <button type="button" class="btn btn-default" ng-click="currency.sortType = 'likes.count'; currency.sortReverse = !currency.sortReverse">Likes</button>
+            <button type="button" class="btn btn-default" ng-click="currency.sortType = 'comments.count'; currency.sortReverse = !currency.sortReverse">Comments</button>
+            <button type="button" class="btn btn-default" ng-click="currency.sortType = ''; currency.sortReverse = !currency.sortReverse">Date</button>
+          </div>
+        </div>
+
+        <div class="row">
+          <div ng-class="{'col-md-3': currency.three = true, 'col-md-4': currency.four, 'col-md-6': currency.six}" class="img-item" ng-repeat="images in currency.images | limitTo:currency.limit | orderBy: currency.sortType: currency.sortReverse">
+            <a href="" class="thumbnail instagram-item" ng-click="currency.showModal($index)">
+              <img class="img-responsive" ng-src="{{ images.images.low_resolution.url }}" alt="">
+              <div class="info">
+                <span class="comments">
+                  <span>{{images.comments.count}}</span>
+                  <span class="glyphicon glyphicon-comment" aria-hidden="true"></span>
+                </span>
+                <span class="likes">
+                  <span>{{images.likes.count}}</span>
+                  <span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
+                </span>
+              </div>
+            </a>
+
+
+
+
+          </div>
+        </div>
+
+        <div class="text-center">
+          <button ng-show="currency.images.length > currency.limit" type="button" class="btn btn-success" ng-click="currency.loadMore()">Show more</button>
+        </div>
+
+        <!--modal here-->
+
+        <div class="modal fade bs-example-modal-lg" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+          <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">{{ currency.images[currency.modalIndex].caption.text }} <span class="grey-lighter">- {{ currency.images[currency.modalIndex].location.name }}</span></h4>
+              </div>
+              <div class="modal-body">
+                <div class="row">
+                  <div class="col-md-8">
+                    <img class="img-responsive" ng-src="{{ currency.images[currency.modalIndex].images.standard_resolution.url }}" alt="">
+                  </div>
+                  <div class="col-md-4">
+                    <div class="modal-sidebar">
+                      <p ng-show="{{ currency.images[currency.modalIndex].tags }}"><strong>tags:</strong> {{ currency.images[currency.modalIndex].tags }}</p>
+                      <p><strong>filter:</strong> {{ currency.images[currency.modalIndex].filter }}</p>
+                      <p><strong>created:</strong> {{ currency.images[currency.modalIndex].created_time | date }}</p>
+                      <p><strong>likes:</strong> {{ currency.images[currency.modalIndex].likes.count }}</p>
+                      <p><strong>comments:</strong> {{ currency.images[currency.modalIndex].comments.count }}</p>
+                      <a href="{{ currency.images[currency.modalIndex].images.standard_resolution.url }}" download class="btn btn-success"><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span> Download</a>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      </main>
+
+
+
+
+    </div>
   </body>
 </html>

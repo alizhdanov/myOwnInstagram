@@ -1,0 +1,18 @@
+{
+  "meta": {
+    "code": 200
+  },
+  "data": {
+    "username": "alikzhdanov",
+    "bio": "",
+    "website": "",
+    "profile_picture": "https://scontent.cdninstagram.com/t51.2885-19/10725051_758398060889156_809048295_a.jpg",
+    "full_name": "Alik Zhdanov",
+    "counts": {
+      "media": 149,
+      "followed_by": 94,
+      "follows": 93
+    },
+    "id": "30834278"
+  }
+}

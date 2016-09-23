@@ -1,0 +1,10 @@
+<!-- Table -->
+<table class="table" >
+<tr>
+  <th>From</th><th>Subject</th><th>Date</th>
+</tr>
+<tr ng-repeat="mail in mailController.mails">
+  <td> {{mail.from}} </td><td>{{mail.subject}}</td><td>{{mail.date}}</td>
+</tr>
+
+</table>

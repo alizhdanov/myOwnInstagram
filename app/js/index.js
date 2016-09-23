@@ -1,29 +1,54 @@
 var app = angular.module('app', []);
 
-app.directive('navPanel', function(){
-  return {
-    restrict: 'E',
-    templateUrl: '../templates/nav-panel.html' 
+// app.service('instagramData', function ($http) {
+//   var self = this;
+//
+//   $http.get('js/instagram.json').then(function (response) {
+//     self.images = response.data.data;
+//   });
+//
+//   $http.get('js/instagramInfo.json').then(function (response) {
+//     self.info = response.data.data;
+//   });
+//
+// });
+
+app.controller('CurrencyController', function($http){
+  var self = this;
+
+  this.limit = 8;
+
+  this.modalIndex = 0;
+
+  this.loadMore = function () {
+    self.limit += 8;
   };
+  
+  this.showModal = function (index) {
+    self.modalIndex = index;
+
+    $('#myModal').modal('show');
+
+  };
+
+  // this.images = instagramData.images;
+
+  $http.get('js/instagram.json').then(function (response) {
+    self.images = response.data.data;
+  });
+
+  // this.sortType = self.images.caption.created_time;
+  this.sortType = '';
+
+  this.sortReverse = false;
+
 });
 
-app.directive('leftPanel', function(){
-  return {
-    restrict: 'E',
-    templateUrl: '../templates/left-panel.html' 
-  };
-});
+app.controller('InfoController', function ($http) {
+  var self = this;
 
-app.directive('mainPanel', function(){
-  return {
-    restrict: 'E',
-    templateUrl: '../templates/main-panel.html' 
-  };
-});
+  $http.get('js/instagramInfo.json').then(function (response) {
+    self.info = response.data.data;
+  });
 
-app.directive('pagePanel', function(){
-  return {
-    restrict: 'E',
-    templateUrl: '../templates/page-panel.html' 
-  };
 });
