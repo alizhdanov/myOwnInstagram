@@ -7,7 +7,7 @@
     <link href="css/style.css" rel="stylesheet">
     <script src="js/angular.min.js"></script>
     <script src="js/jquery-3.1.0.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    <script src="js/modal.js"></script>
     <script src="js/index.js"></script>
   </head>
   <body>
@@ -70,7 +70,7 @@
 
         <div class="row">
           <div ng-class="{'col-md-3': currency.three = true, 'col-md-4': currency.four, 'col-md-6': currency.six}" class="img-item" ng-repeat="images in currency.images | limitTo:currency.limit | orderBy: currency.sortType: currency.sortReverse">
-            <a href="" class="thumbnail instagram-item" ng-click="currency.showModal($index)">
+            <a href="" class="thumbnail instagram-item" ng-click="currency.showModal(images)">
               <img class="img-responsive" ng-src="{{ images.images.low_resolution.url }}" alt="">
               <div class="info">
                 <span class="comments">
@@ -101,21 +101,21 @@
             <div class="modal-content">
               <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="myModalLabel">{{ currency.images[currency.modalIndex].caption.text }} <span class="grey-lighter">- {{ currency.images[currency.modalIndex].location.name }}</span></h4>
+                <h4 class="modal-title" id="myModalLabel">{{ currency.modalIndex.caption.text }} <span class="grey-lighter">- {{ currency.modalIndex.location.name }}</span></h4>
               </div>
               <div class="modal-body">
                 <div class="row">
                   <div class="col-md-8">
-                    <img class="img-responsive" ng-src="{{ currency.images[currency.modalIndex].images.standard_resolution.url }}" alt="">
+                    <img class="img-responsive" ng-src="{{ currency.modalIndex.images.standard_resolution.url }}" alt="">
                   </div>
                   <div class="col-md-4">
                     <div class="modal-sidebar">
-                      <p ng-show="{{ currency.images[currency.modalIndex].tags }}"><strong>tags:</strong> {{ currency.images[currency.modalIndex].tags }}</p>
-                      <p><strong>filter:</strong> {{ currency.images[currency.modalIndex].filter }}</p>
-                      <p><strong>created:</strong> {{ currency.images[currency.modalIndex].created_time | date }}</p>
-                      <p><strong>likes:</strong> {{ currency.images[currency.modalIndex].likes.count }}</p>
-                      <p><strong>comments:</strong> {{ currency.images[currency.modalIndex].comments.count }}</p>
-                      <a href="{{ currency.images[currency.modalIndex].images.standard_resolution.url }}" download class="btn btn-success"><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span> Download</a>
+                      <p ng-show="{{ currency.modalIndex.tags }}"><strong>tags:</strong> {{ currency.modalIndex.tags }}</p>
+                      <p><strong>filter:</strong> {{ currency.modalIndex.filter }}</p>
+                      <p><strong>created:</strong> {{ currency.modalIndex.created_time | date }}</p>
+                      <p><strong>likes:</strong> {{ currency.modalIndex.likes.count }}</p>
+                      <p><strong>comments:</strong> {{ currency.modalIndex.comments.count }}</p>
+                      <a href="{{ currency.modalIndex.images.standard_resolution.url }}" download class="btn btn-success"><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span> Download</a>
                     </div>
                   </div>
                 </div>

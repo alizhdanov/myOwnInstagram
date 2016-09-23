@@ -149,7 +149,7 @@ gulp.task('styles-dest', function() {
       .pipe(notify("CSS-DEST Compiled"));
 });
 
-gulp.task('images-dest', function() {
+gulp.task('images.json-dest', function() {
 	return gulp.src('app/img/**/*')
 	.pipe(imagemin())
 	.pipe(gulp.dest('dist/img/'))

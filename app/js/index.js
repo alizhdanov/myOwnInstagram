@@ -4,7 +4,7 @@ var app = angular.module('app', []);
 //   var self = this;
 //
 //   $http.get('js/instagram.json').then(function (response) {
-//     self.images = response.data.data;
+//     self.images.json = response.data.data;
 //   });
 //
 //   $http.get('js/instagramInfo.json').then(function (response) {
@@ -26,19 +26,20 @@ app.controller('CurrencyController', function($http){
   
   this.showModal = function (index) {
     self.modalIndex = index;
+    
 
     $('#myModal').modal('show');
 
   };
 
-  // this.images = instagramData.images;
+  // this.images.json = instagramData.images.json;
 
   $http.get('https://api.instagram.com/v1/users/self/media/recent/?access_token=30834278.1677ed0.89946055d33c49e594dc7f8cc9039dee').then(function (response) {
     self.images = response.data.data;
     console.log('media downloaded');
   });
 
-  // this.sortType = self.images.caption.created_time;
+  // this.sortType = self.images.json.caption.created_time;
   this.sortType = '';
 
   this.sortReverse = false;

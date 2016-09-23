@@ -77,7 +77,7 @@ img {
   vertical-align: middle;
 }
 
-// Responsive images (ensure images don't scale beyond their parents)
+// Responsive images.json (ensure images.json don't scale beyond their parents)
 .img-responsive {
   @include img-responsive;
 }
