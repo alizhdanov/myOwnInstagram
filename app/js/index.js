@@ -33,8 +33,9 @@ app.controller('CurrencyController', function($http){
 
   // this.images = instagramData.images;
 
-  $http.get('js/instagram.json').then(function (response) {
+  $http.get('https://api.instagram.com/v1/users/self/media/recent/?access_token=30834278.1677ed0.89946055d33c49e594dc7f8cc9039dee').then(function (response) {
     self.images = response.data.data;
+    console.log('media downloaded');
   });
 
   // this.sortType = self.images.caption.created_time;
@@ -47,8 +48,9 @@ app.controller('CurrencyController', function($http){
 app.controller('InfoController', function ($http) {
   var self = this;
 
-  $http.get('js/instagramInfo.json').then(function (response) {
+  $http.get('https://api.instagram.com/v1/users/self/?access_token=30834278.1677ed0.89946055d33c49e594dc7f8cc9039dee').then(function (response) {
     self.info = response.data.data;
+    console.log('info downloaded');
   });
 
 });
